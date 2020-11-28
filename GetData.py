@@ -74,7 +74,7 @@ def getData():
     if not os.path.exists('data/' + str(userid)):
       os.mkdir('data/' + str(userid))
 
-      # Get Followercount of each streamer
+      # Get followercount of each streamer
       follower = getFollowerCount(userid).json()
       data = {'user_id': userid, 'total':  follower['total']} 
       followerDF = pd.DataFrame(data, index=[0])   
